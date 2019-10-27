@@ -1,0 +1,69 @@
+stackbitVersion: ~0.2.0
+ssgName: custom
+buildCommand: cd exampleSite && hugo --gc --baseURL "/" --themesDir ../.. && cd ..
+publishDir: exampleSite/public
+staticDir: exampleSite/static
+uploadDir: images
+dataDir: exampleSite
+pagesDir: exampleSite/content
+models:
+  pagenotfound:
+    type: page
+    label: '404'
+    file: _global/404.md
+    hideContent: true
+    singleInstance: true
+    fields:
+      - type: number
+        name: weight
+        label: Weight
+      - type: string
+        name: fragment
+        label: Fragment
+        default: '404'
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+      - type: string
+        name: subtitle
+        label: Subtitle
+        description: The sub-title of the page.
+      - type: string
+        name: redirect_text
+        label: Content
+        description: Content of the page.
+      - type: string
+        name: button_text
+        label: Title
+        description: Title of the redirect button.
+      - type: string
+        name: redirect_url
+        label: Redirect URL
+        description: URL of the redirect button
+  global:
+    type: page
+    label: Global
+    file: _global/index.md
+    fields:
+      - type: boolean
+        name: headless
+        label: Headless
+        default: true
+  home:
+    type: page
+    label: Home
+    file: _index.md
+    hideContent: false
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: string
+        name: description
+        label: Description
+        description: The description of the page.
+        required: true
