@@ -33,7 +33,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
     "bootstrap": "^4.1.1",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "foreman": "^3.0.0",
     "form-validator-simple": "^0.1.1",
     "fuse.js": "^3.2.1",
